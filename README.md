@@ -55,7 +55,35 @@ This dataset can be used for:
   - **Histograms and Density Plots**: For feature distribution.
   - **Correlation Heatmaps**: To explore feature interdependence.
   - **Boxplots**: To identify outliers.
+```python
+plt.figure(figsize=(6, 4))
+sns.violinplot(data=data, x='Outcome', y='BMI', palette='muted')
+plt.title('Violin Plot for BMI by Outcome')
+plt.show()
+  ```
+![](https://github.com/Arif-miad/Diabetes-Prediction-Using-Machine-Learning-and-Data-Visualization/blob/main/ar1.png)
 
+```python
+# 4. Scatter Plot for Age vs Glucose
+plt.figure(figsize=(6, 4))
+sns.scatterplot(data=data, x='Age', y='Glucose', hue='Outcome', palette='deep')
+plt.title('Scatter Plot for Age vs Glucose')
+plt.show()
+```
+![](https://github.com/Arif-miad/Diabetes-Prediction-Using-Machine-Learning-and-Data-Visualization/blob/main/ar2.png)
+```python
+sns.pairplot(data, hue='Outcome', palette='husl', diag_kind='kde')
+plt.suptitle('Pairplot for Continuous Variables', y=1.02)
+plt.show()
+```
+![](https://github.com/Arif-miad/Diabetes-Prediction-Using-Machine-Learning-and-Data-Visualization/blob/main/ar3.png)
+```python
+plt.figure(figsize=(6, 4))
+sns.kdeplot(data=data, x='Glucose', hue='Outcome', fill=True, palette='muted')
+plt.title('KDE Plot for Glucose by Outcome')
+plt.show()
+```
+![](https://github.com/Arif-miad/Diabetes-Prediction-Using-Machine-Learning-and-Data-Visualization/blob/main/ar20.png)
 ### 3. Model Development
 - Train machine learning models such as Logistic Regression, Random Forest, and XGBoost.
 - Evaluate models using metrics like accuracy, precision, recall, and ROC-AUC.
